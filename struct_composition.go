@@ -34,6 +34,17 @@ func (t *truck) drive() {
    fmt.Printf("Truck %s %s, on the go!\n", t.make, t.model)
 }
 
+type plane struct {
+vechicle
+engine
+engineCount int
+fixedWings bool
+maxAltitude int
+}
+func (p *plane) fly() {
+   fmt.Printf("Aircraft %s %s clear for takeoff\n", p.make, p.model,)
+}
+
 func main() {
 }
 
