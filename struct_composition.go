@@ -35,7 +35,7 @@ func (t *truck) drive() {
 }
 
 type plane struct {
-vechicle
+vehicle
 engine
 engineCount int
 fixedWings bool
@@ -46,5 +46,25 @@ func (p *plane) fly() {
 }
 
 func main() {
+   t := &truck {
+      vehicle:vehicle{"Ford", "F750"},
+      engine:engine{GASOLINE+BIO,700},
+      axels:2,
+      wheels:6,
+      class:3,
+   }
+   t.start()
+   t.drive()
+   
+   // p := &plane{}
+   p := new(plane)
+   p.make = "HondaJet"
+   p.model = "HA-420"
+   p.fuel = JET
+   p.thrust = 2050
+   p.engineCount = 2
+   p.fixedWings = true
+   p.maxAltitude = 43000
+   p.start()
+   p.fly()
 }
-
