@@ -45,6 +45,18 @@ func (p *plane) fly() {
    fmt.Printf("Aircraft %s %s clear for takeoff\n", p.make, p.model,)
 }
 
+// Constructors
+func newTruck(mk, mdl string) *truck {
+   return &truck {vehicle:vehicle{mk, mdl}}
+}
+
+func newPlane(mk, mdl string) *plane {
+   p := &plane{}
+   p.make = mk
+   p.model = mdl
+   return p
+}
+
 func main() {
    t := &truck {
       vehicle:vehicle{"Ford", "F750"},
@@ -67,4 +79,10 @@ func main() {
    p.maxAltitude = 43000
    p.start()
    p.fly()
+   var q = newTruck("a","b")
+   var r = newPlane("c","d")
+   q.start()
+   q.fly()
+   r.start()
+   r.fly()
 }
